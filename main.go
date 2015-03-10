@@ -31,10 +31,10 @@ import (
 	schedulerImpl "github.com/att-innovate/charmander-scheduler/scheduler/impl"
 )
 
-// cmdline arguments
-var masterAddress  = flag.String("master", "127.0.0.1:5050", "Address for Mesos Master")
+// cmdline arguments http://172.31.1.11:5050/ http://172.31.2.11:31610
+var masterAddress  = flag.String("master", "127.31.1.11:5050", "Address for Mesos Master")
 var myIP           = flag.String("local-ip", "127.0.0.1", "Local IP Address")
-var redisIPAndPort = flag.String("redis", "127.0.0.1:6379", "Redis IP Address:Port")
+var redisIPAndPort = flag.String("redis", "127.31.2.11:31610", "Redis IP Address:Port")
 
 
 func main() {
