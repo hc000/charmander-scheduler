@@ -35,11 +35,11 @@ type AdminHandler struct {
 func (self *AdminHandler) ServeHTTP(responseWriter http.ResponseWriter, request *http.Request) {
 	path := html.EscapeString(request.URL.Path)
 	if strings.HasSuffix(path, "/ping") {
-		if origin := r.Header.Get("Origin"); origin != "" {
-            		responseWriter.Header().Set("Access-Control-Allow-Origin", origin)
-        	}
-        	responseWriter.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
-        	responseWriter.Header().Set("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
+		//if origin := r.Header.Get("Origin"); origin != "" {
+            	//	responseWriter.Header().Set("Access-Control-Allow-Origin", origin)
+        	//}
+        	//responseWriter.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+        	//responseWriter.Header().Set("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 		fmt.Fprintf(responseWriter, "Pong\n")
 		return
 	}
