@@ -31,9 +31,9 @@ import (
 	schedulerImpl "github.com/att-innovate/charmander-scheduler/scheduler/impl"
 )
 
-// cmdline arguments http://172.31.1.11:5050/ http://172.31.2.11:31610
+// cmdline arguments http://172.31.1.11:5050/ http://172.31.2.11:31610 10.17.173.72
 var masterAddress  = flag.String("master", "172.31.1.11:5050", "Address for Mesos Master")
-var myIP           = flag.String("local-ip", "127.0.0.1", "Local IP Address")
+var myIP           = flag.String("local-ip", "10.17.173.72", "Local IP Address")
 var redisIPAndPort = flag.String("redis", "172.31.2.11:31610", "Redis IP Address:Port")
 
 
